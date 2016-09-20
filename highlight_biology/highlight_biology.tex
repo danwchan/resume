@@ -1,0 +1,183 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{orange}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+\usepackage{mathtools}
+\usepackage{xstring}
+
+% personal data
+\name{Daniel}{Chan}
+%\title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{1171 E 61 Street, Apartment 3, 60637}{Chicago, IL}{United States}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+1 312 532 5036}                   % optional, remove / comment the line if not wanted
+%\phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{danwchan@uchicago.edu}                               % optional, remove / comment the line if not wanted
+\homepage{www.danwchan.ca}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+\social[twitter]{id\_EATER}                             % optional, remove / comment the line if not wanted
+%\social[github]{jdoe}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+%to bold name in publications
+\def\FormatName#1{%
+  \IfSubStr{#1}{Chan~DW}{\textbf{#1}}{#1}%
+}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\vspace{-30pt}
+
+\begin{center}
+\textit{I advocate for open science practices in order to foster communication both within the scientific community and within the broader public. I am deeply interested in the genetic basis and diversity of social communication among bacteria and other microbial life.}
+\end{center}
+
+\section{Education}
+
+\subsection{Academic Qualifications}
+
+\cventry{2011--present}{Ph.D. Candidate}{University of Chicago}{Chicago, IL, USA}{\textit{Department of Microbiology}}{}{}  % arguments 3 to 6 can be left empty
+
+\cventry{2006--2011}{Honours Microbiology and English (Rhetoric) Minor}{University of Waterloo}{Waterloo, ON, Canada}{}{}
+
+\subsection{Notable Coursework}
+
+\cvitem{Microbiology graduate core curriculum}{\small Bacterial Pathogenesis, Virology, Host-Pathogen Interactions, Scientific Ethics, Cell Biology I, Molecular Biology I, Protein Fundamentals}
+
+\cvitem{Electives}{\small Bioinformatics and Microbial Ecology, Introduction to Scientific Computing for Biologists, Software Carpentry (R)}
+
+\cvitem{Certificate programs}{\small Business of Life Sciences, Elements of Successful Teaching in the Sciences, Elements of Successful Writing in the Sciences, Data Analysis in R}
+
+\section{Research Positions}
+
+\cventry{September 2011--June 2011}{Senior Thesis Student}{Department of Biology}{University of Waterloo}{Supervisor/PI: Dr. John J Heikkila}{I independently applied previously acquired skills in cloning and protein purification to produce and characterize the molecular chaperone activity of \textit{Xenopus laevis} small heat-shock proteins, HSP27 and $\alpha$B-crysallin. Site-directed mutagenesis was used to assess the contribution of charged amino acids to chaperone activity.}
+
+\cventry{January 2010--September 2010}{Research Assistant}{Department of Neurobiology}{Yale University}{PI: Dr. Nenad \v{S}estan}{I developed a polysome purification protocol of actively translated RNA using immunoprecpitation followed by ultracentrefugation and fractionation. Research was focused on the mechanisms of NOS1 expression in the developing prefrontal cortex of mice and humans. Lab duties also included animal colony management, primary cell culture and dissection.}
+
+\cventry{Fall 2008--Summer 2009}{Research Technician}{Cancer Genomics and Proteomics}{University Health Network}{PI: Dr. Nickolay Chirgadze}{This lab was organized as a crystallography pipeline working on solving difficult structures from the Structural Genomic Consortium. I was part of the cloning and test expression unit upstream of large scale purification. In my second 4 month term I had a small independent project to optimize HMGCR expression in insect cells.}
+
+\newpage
+
+\cventry{January 2008--April 2008}{Research Assistant}{Fermentation R\&D}{Iogen Corporation}{Staff Scientist: Dr. Jan-Maarten Geertman}{I was assigned to assist on a project to determine the effects of ethanol concentration on growth parameters of a production strain of \textit{Saccharomyces cerevisiae}. I had a minor project in the lab investigating the nutritional requirements of other yeasts. I also performed routine HPLC to characterize enzymatic digestions from an upstream process.}
+
+\section{Awards}
+
+\cvitemwithdes{University of Waterloo Graduating Dean's Honours List}{Recognition awarded for maintaining a cumulative average of >80\% in an honours program}{2011}
+
+\cvitemwithdes{WACE International Student Achievement Award}{Recognition awarded by the World Association for Co-operative Education for obtaining an exceptional international work placement at Yale University}{2010}
+
+\cvitemwithdes{NSERC Undergraduate Student Research Award}{Funding awarded by the Natural Sciences and Engineering Research Council to pursue a research project in cellulosic ethanol R\&D at Iogen Corporation}{2007}
+
+\cvitemwithdes{Millennium Excellence Scholarship, Provincial Laureate}{Awarded for excellence in community involvement, leadership and academic achievement}{2006--2010}
+
+\cvitemwithdes{University of Waterloo President's Scholarship}{Entrance scholarship awarded to individuals with an average of >90\% graduating high school}{2006}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels:
+%\renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{my_plain}
+\bibliography{../my_publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\section{Posters}
+
+\cvitemwithdes{Interaction of \textit{Staphylococcus aureus} with the \textit{in vitro} human keratinized epithelium}{
+	\cvsubitem{$13^{th}$ Annual Chicago Biomedical Consortium Symposium, The Unseen Majority: \\ \textit{Microbes in Health and Disease}}{ }{October 2015}}{ }
+
+\cvitemwithdes{Interaction of \textit{S. aureus} USA300 with the human keratinized epithelium}{
+	\cvsubitem{$6^{th}$ Annual Northwestern University Skin Disease Research Center Retreat}{ }{June 2015}
+	\cvsubitem{University of Chicago Biomedical Sciences Retreat}{ }{May 2015}}{ }
+
+\cvitemwithdes{Interaction of \textit{S. aureus} USA300 with the keratinized epithelium}{
+	\cvsubitem{$16^{th}$ International Symposium on Staphococci and Staphylococcal Infections}{ }{August 2014}
+	\cvsubitem{$22^{nd}$ Annual Midwest Microbial Pathogenesis Conference}{ }{August 2014}
+	\cvsubitem{$5^{th}$ Annual Northwestern University Skin Disease Research Center Retreat}{ }{June 2014}}{ }
+
+\newpage
+
+\section{Teaching and Mentorship}
+
+\cventry{June 2014--present}{iGEM Team: Graduate Advisor}{GeneHackers}{University of Chicago}{}{I advised the University of Chicago undergraduates in project selection, planning and execution for two years, one project per year. Students with little previous molecular biology experience were tasked with cloning key constructs to test proof of concept in the International Genetically Engineered Machine standard organism chassis (\textit{E. coli}). The team has improved from Bronze level to Silver during my supervision.}
+
+\cventry{January 2014--March 2014}{Course Tutor, Molecular Basis of Bacterial Disease}{Freelance work}{University of Chicago}{}{I created test questions and walked a single student thorough lectures. She was struggling with the course and the TA did not have enough time for her. A key breakthrough was helping the student to conceptualize a framework to place the disparate lecture topics into context facilitating memorization and synthesis of content.}
+
+\cventry{January 2013--June 2013}{Teaching Assistant}{Biological Sciences Division}{University of Chicago}{}{I was a TA for two courses over two terms. In BIOS 25287 Introduction to Virology, I led journal article discussions, graded assignments/exams, provided feedback, answered questions and gave a single lecture. In BIOS 25216 Molecular Basis of Bacterial Disease I performed the same duties and was also responsible for formulating weekly quizzes, composing the exams and lecturing twice. Class sizes were <30 people.}
+
+\cventry{Fall 2008}{Course Tutor}{Students Offering Support}{University of Waterloo}{}{I prepared sample exam questions and a list of topics for the introductory microbiology course. These resources were deposited in the student office. I also led a review session with <20 people consisting of questions and answers.}
+
+\section{Service}
+
+\cventry{September 2013--March 2016}{Departmental Representative}{Biological Sciences Division Dean's Council}{University of Chicago}{Microbiology Department}{I was responsible for attending meetings to discuss issues of importance to BSD students and administrating funds for student initiated events. I authored some meeting minutes and new student orientation materials. I also reviewed student travel grants and recommended them for funding.}
+
+\cventry{May 2013}{Reviewer}{PLOS ONE}{}{Ad Hoc}{}
+
+\section{Outreach}
+
+\cventry{March 2016--present}{Radio and Podcast Host}{Groks Science}{\url{www.groks.net}}{}{I am the newest addition to the team and have appeared on the radio program (WHPK 88.5) in discussions about science news headlines. I plan to renovate the website and expand the social media engagement of the show to understand our audience and craft a better scientific education message.}
+
+\cventry{April 2014--January 2016}{Attendee and moderator}{Microbiology Twitter Journal Club}{\url{microtwjc.wordpress.com}}{}{I contributed to public discussions of open access microbiology papers using the \#microtwjc hashtag. Later, I moderated a few discussions myself but the group is in a dormant period at the moment.}
+
+\section{References and Documentation}
+
+\begin{itemize}
+
+\item{References and documents pertaining to individual entries available on request}
+
+\end{itemize}
+
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
