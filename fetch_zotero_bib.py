@@ -9,10 +9,10 @@ for c in library.collections():
   if c['data']['name'] == "my_publications":
     fetchID = c['key']
 
-fetchbibtex = zot.collection_items(fetchID, include = 'bibtex')
+fetchbibtex = library.collection_items(fetchID, include = 'bibtex')
 
 with open('my_publications.bib', 'w') as file:
   for items in fetchbibtex:
-    file.write(items['bibtex'].encode('utf-9'))
+    file.write(items['bibtex'].encode('utf-8'))
 
 file.close()
