@@ -1,2 +1,4 @@
-zot = zotero.Zotero('1290888', 'user', '0ND4plpbYqd1jUyjLz2f0FPn')
- 
+from pyzotero import zotero
+from secrets import
+
+zot = zotero.Zotero(userID, 'user', key)
