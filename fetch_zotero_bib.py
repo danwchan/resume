@@ -1,7 +1,7 @@
 from pyzotero import zotero
 
 #this is your Zotero login info
-import secrets
+from secrets import userID,key
 
 library = zotero.Zotero(userID, 'user', key)
 
